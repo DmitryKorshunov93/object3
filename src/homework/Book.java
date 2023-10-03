@@ -1,5 +1,7 @@
 package homework;
 
+import java.util.Objects;
+
 public class Book {
 
     private String bookTitle;
@@ -23,6 +25,19 @@ public class Book {
 
     public Author getAuthor() {
         return this.author;
+    }
+    public int hashCode() {
+        return Objects.hash(bookTitle, age);
+    }
+    public boolean equals(Object i) {
+        if (i == null) {
+            return false;
+        }
+        if (getClass() != i.getClass()) {
+            return false;
+        }
+        Book book = (Book) i;
+        return  book.bookTitle.equals(bookTitle) ;
     }
 
     public void setAge(int age) {

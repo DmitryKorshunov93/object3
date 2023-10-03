@@ -13,6 +13,8 @@ public class Main {
         Book bookOne = new Book("Animal farm", 1945, orwell);
         Book bookTwo = new Book("Brave New World", 1932, huxley);
 
+        System.out.println(bookOne.equals(bookTwo));
+
         print(bookOne);
         print(bookTwo);
     }
